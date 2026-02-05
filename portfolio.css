@@ -1,104 +1,107 @@
-/* base */
+/* portfolio.css */
+/* =========================
+   Solmi Portfolio (Coral + B/W)
+   ========================= */
+
+/* 1) Tokens */
 :root{
-  --text: #111;
-  --muted: #666;
-  --line: #eee;
-  --bg: #fff;
-  --card: #fff;
-  --accent: #502FC5;
+  --black: #111111;
+  --white: #ffffff;
+  --gray-100: #f7f7f7;
+  --gray-200: #f0f0f0;
+  --gray-300: #e5e5e5;
+  --gray-600: #666666;
+
+  --coral: #FF5A4F;
+  --coral-soft: #FFF0EF;
+  --coral-muted: rgba(255,90,79,0.12);
+
   --radius: 18px;
 }
 
+/* 2) Base */
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
+
 body{
-  margin:0;
+  margin: 0;
   font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-  color: var(--text);
-  background: var(--bg);
+  color: var(--black);
+  background: var(--white);
   line-height: 1.5;
 }
 
 img{
-  display:block;
-  width:100%;
-  height:auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-/* layout */
+/* 3) Layout */
 .container{
   width: min(1100px, 92vw);
   margin: 0 auto;
 }
 
-.section-head{
-  margin: 40px 0 18px;
-}
-.section-head h2{
-  margin:0;
-  font-size: 28px;
-}
-.section-head p{
-  margin: 8px 0 0;
-  color: var(--muted);
-}
-
-/* nav */
+/* 4) Nav */
 .nav{
   position: sticky;
-  top:0;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
+  top: 0;
   z-index: 10;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gray-300);
 }
 
 .nav-inner{
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 18px 0;
 }
 
 .logo{
-  text-decoration:none;
-  color: var(--text);
+  text-decoration: none;
+  color: var(--black);
   font-weight: 900;
   letter-spacing: -0.2px;
 }
 
 .menu{
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   gap: 18px;
 }
+
 .menu a{
-  color: var(--text);
-  text-decoration:none;
+  color: var(--black);
+  text-decoration: none;
   padding: 10px 10px;
   border-radius: 10px;
 }
+
 .menu a:hover{
-  color: var(--accent);
-  background: rgba(80,47,197,0.06);
+  color: var(--coral);
+  background: var(--coral-muted);
 }
 
-/* hero */
+/* 5) Hero */
 .hero{
   padding: 56px 0 28px;
 }
+
 .hero-inner{
-  text-align:center;
-  padding: 60px 20px;
-  border: 1px solid var(--line);
+  text-align: center;
+  padding: 64px 24px;
+  border: 1px solid var(--gray-300);
   border-radius: var(--radius);
-  background: linear-gradient(180deg, rgba(80,47,197,0.06), rgba(80,47,197,0));
+  background: linear-gradient(180deg, var(--coral-soft), var(--white) 60%);
 }
 
 .hero-kicker{
   margin: 0 0 10px;
-  color: var(--accent);
-  font-weight: 700;
+  color: var(--coral);
+  font-weight: 800;
   letter-spacing: 0.2px;
 }
 
@@ -111,64 +114,93 @@ img{
 
 .hero-text{
   margin: 14px auto 0;
-  max-width: 720px;
+  max-width: 760px;
   font-size: 18px;
-  color: var(--muted);
+  color: var(--gray-600);
 }
 
+/* Hero Buttons */
 .hero-actions{
   margin-top: 22px;
-  display:flex;
+  display: flex;
   gap: 10px;
-  justify-content:center;
+  justify-content: center;
 }
 
-/* buttons */
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 44px;
   padding: 0 16px;
   border-radius: 12px;
-  border: 1px solid var(--line);
-  background: #fff;
-  color: var(--text);
-  text-decoration:none;
-  font-weight: 700;
+  border: 1px solid var(--gray-300);
+  background: var(--white);
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 800;
 }
+
 .btn:hover{
-  border-color: rgba(80,47,197,0.35);
+  border-color: rgba(255,90,79,0.45);
 }
+
 .btn.primary{
-  background: var(--accent);
-  color:#fff;
-  border-color: var(--accent);
+  background: var(--coral);
+  color: var(--white);
+  border-color: var(--coral);
 }
 
-/* cards */
-.card{
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow:hidden;
+.btn.primary:hover{
+  background: #ff3f34;
+  border-color: #ff3f34;
 }
 
+/* 6) Section */
+.section{
+  padding: 28px 0;
+}
+
+.section-head{
+  margin: 40px 0 18px;
+}
+
+.section-head h2{
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.2px;
+}
+
+.section-head p{
+  margin: 8px 0 0;
+  color: var(--gray-600);
+}
+
+/* 7) Grid / Cards */
 .grid{
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding: 10px 0 0;
+  padding-top: 10px;
 }
 
+.card{
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Project Card */
 .work-card{
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
+
 .work-card:hover{
   transform: translateY(-6px);
-  border-color: rgba(80,47,197,0.35);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+  border-color: var(--coral);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.08);
 }
 
 .work-card img{
@@ -179,45 +211,65 @@ img{
 .work-body{
   padding: 16px;
 }
+
 .work-body h3{
   font-size: 18px;
   margin: 0;
+  letter-spacing: -0.2px;
 }
+
 .meta{
   margin: 8px 0 0;
-  color: var(--muted);
+  color: var(--gray-600);
   font-size: 14px;
 }
 
-/* footer */
+/* 8) Footer */
 .footer{
-  display:flex;
-  align-items:center;
+  margin-top: 80px;
+  border-top: 1px solid var(--gray-300);
+}
+
+.footer-inner{
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 36px 0 60px;
-  margin-top: 80px;
-  border-top: 1px solid var(--line);
+}
+
+.copyright{
+  margin: 0;
+  color: var(--gray-600);
 }
 
 .links{
-  display:flex;
+  display: flex;
   gap: 16px;
 }
+
 .links a{
-  text-decoration:none;
-  color: var(--text);
-}
-.links a:hover{
-  color: var(--accent);
+  text-decoration: none;
+  color: var(--black);
 }
 
-/* responsive */
+.links a:hover{
+  color: var(--coral);
+}
+
+/* 9) Responsive */
 @media (max-width: 900px){
   .grid{ grid-template-columns: repeat(2, 1fr); }
   .hero-title{ font-size: 38px; }
 }
+
 @media (max-width: 560px){
   .grid{ grid-template-columns: 1fr; }
   .hero-inner{ padding: 44px 16px; }
+  .hero-title{ font-size: 32px; }
   .hero-actions{ flex-direction: column; }
+  .footer-inner{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
