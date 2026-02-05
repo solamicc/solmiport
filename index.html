@@ -1,69 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <link href="portfolio.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solmi Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
 </head>
 
 <body>
-<!--헤더-->
-<header class="nav">
+  <!-- Header -->
+  <header class="nav">
     <div class="container nav-inner">
       <a class="logo" href="#">Solmi</a>
       <nav class="menu">
-        <a href="#">About</a>
-        <a href="#">Project</a>
-        <a href="#">Contact</a>
+        <a href="#about">About</a>
+        <a href="#projects">Project</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
-</header>
+  </header>
 
-<section class="container hero">
-  <div class="hero">
-  <h1 class="hero-title">안녕하세요. 디자이너 박솔미입니다.</h1>
-<p class="hero-text">캐릭터·상세페이지·배너·UI/UX</p>  
-  </div>  
-</section>
+  <!-- Hero -->
+  <section class="container hero" id="about">
+    <div class="hero-inner">
+      <p class="hero-kicker">Brand / Commerce / UIUX</p>
+      <h1 class="hero-title">안녕하세요. 디자이너 박솔미입니다.</h1>
+      <p class="hero-text">캐릭터·상세페이지·배너 제작 경험을 바탕으로, UI/UX까지 확장 중입니다.</p>
 
-<!--프로젝트 카드-->
-<section class="container">
-    <h2>프로젝트</h2>
-    <div class="grid">
-        <article class="card work-card">
-          <img src="img/project01.jpg" alt="썸네일">
-          <div class="work body">
-            <h3>첫번째 프로젝트</h3>
-          </div>
-        </article>
-    
-        <article class="card work-card">
-          <img src="img/project02.jpg" alt="썸네일">
-          <div class="work body">
-            <h3>두번째 프로젝트</h3>
-          </div>
-        </article>
-
-        <article class="card work-card">
-          <img src="img/project03.jpg" alt="썸네일">
-          <div class="work body">
-            <h3>세번째 프로젝트</h3>
-          </div>
-        </article>
-
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">프로젝트 보기</a>
+        <a class="btn" href="#contact">연락하기</a>
+      </div>
     </div>
-</section>
+  </section>
 
-<!--footer-->
-<footer class="container footer">
-  <p class="copyright">&copy; 2026 Solmi. All rights reserved.</p>
-  <div class="link">
-    <a href="#">Instagram</a>
-    <a href="#">Behance</a>
-    <a href="#">notefolio</a>
-  </div>
-</footer>
+  <!-- Projects -->
+  <section class="container" id="projects">
+    <div class="section-head">
+      <h2>프로젝트</h2>
+      <p>대표 작업을 골라 담았습니다.</p>
+    </div>
 
+    <div class="grid">
+      <article class="card work-card">
+        <img src="img/project01.jpg" alt="프로젝트 1 썸네일">
+        <div class="work-body">
+          <h3>첫번째 프로젝트</h3>
+          <p class="meta">상세페이지 · 운영 디자인</p>
+        </div>
+      </article>
+
+      <article class="card work-card">
+        <img src="img/project02.jpg" alt="프로젝트 2 썸네일">
+        <div class="work-body">
+          <h3>두번째 프로젝트</h3>
+          <p class="meta">캐릭터 · 콘텐츠</p>
+        </div>
+      </article>
+
+      <article class="card work-card">
+        <img src="img/project03.jpg" alt="프로젝트 3 썸네일">
+        <div class="work-body">
+          <h3>세번째 프로젝트</h3>
+          <p class="meta">UI/UX · 미니 프로젝트</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container footer" id="contact">
+    <p class="copyright">&copy; 2026 Solmi. All rights reserved.</p>
+    <div class="links">
+      <a href="#" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="#" target="_blank" rel="noreferrer">Behance</a>
+      <a href="#" target="_blank" rel="noreferrer">Notefolio</a>
+    </div>
+  </footer>
 </body>
 </html>
